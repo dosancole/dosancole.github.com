@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -17,6 +17,7 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/hack.css" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -30,9 +31,45 @@
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
+    <script type="text/javascript">
+(function(w,d){
+    w._gaq=[["_setAccount","UA-33920795-3"],["_trackPageview"]];
+    w.___gcfg={lang:"ja"};
+    var s,e = d.getElementsByTagName("script")[0],
+    a=function(u,f){if(!d.getElementById(f)){s=d.createElement("script");
+    s.src=u;if(f){s.id=f;}e.parentNode.insertBefore(s,e);}};
+    a(("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js","ga");
+    a("https://apis.google.com/js/plusone.js");
+    a("//b.st-hatena.com/js/bookmark_button_wo_al.js");
+    a("//platform.twitter.com/widgets.js","twitter-wjs");
+})(this, document);
+    </script>
+
+<!-- facebook og -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
+<meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
+<meta property="og:url" content="{{site.root_url}}{{page.url}}" />
+<meta property="og:image" content="{% if page.ogp_image %}{{ page.ogp_image }}{% else %}{{ site.default_ogp_image }}{% endif %}" />
+<meta property="og:author" content="dosancole" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:locale" content="{{ site.facebook_locale }}" />
+<meta property="og:type" content="{% if page.index %}blog{% else %}article{% endif %}" />
+<meta property="fb:app_id" content="{{ site.facebook_app_id }}" />
+
   </head>
 
   <body>
+
+<!-- facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/{{ site.facebook_locale }}/all.js#appId={{ site.facebook_app_id }}&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -51,11 +88,9 @@
       <div class="content">
         {{ content }}
       </div>
-      <hr>
-      <footer>
+      <hr style="margin:10px;" />
+      <footer style="text-align:center;">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
 

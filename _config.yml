@@ -9,7 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : dosancole Works
+root_url : http://www.dosancole.com
+title : dosandbox
 tagline: Site Tagline
 author :
   name : takuya Dosancole
@@ -89,11 +90,11 @@ JB :
     intensedebate :
       account : 123abc
     facebook :
-  #   appid : 123
+      appid : 418371971537757
       num_posts: 5
       width: 580
       colorscheme: light
-   
+
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
@@ -125,5 +126,16 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
+# facebook
+facebook_like: true
+
+facebook_app_id: 418371971537757
+facebook_locale: ja_JP
  
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet 
+redcarpet: 
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", 
+                 "tables", "with_toc_data"] 
+                 
