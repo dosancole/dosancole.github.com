@@ -8,6 +8,9 @@ tags: []
 ---
 {% include JB/setup %}
 
+{% instagram http://instagram.com/p/gng4OEAJLp/ 680 %}
+
+
 ## 概要
 
 - 2013/11/07(木)〜11/08(金)

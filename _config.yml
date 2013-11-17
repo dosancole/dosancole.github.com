@@ -139,3 +139,7 @@ redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", 
                  "tables", "with_toc_data"] 
                  
+
+# Instagram plugin
+instagram_cache:         true # or true
+instagram_cache_dir:     '.instagram-cache'      # default '.instagram-cache'

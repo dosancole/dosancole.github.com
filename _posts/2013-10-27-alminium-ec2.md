@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Amazon EC2にAlminiumをインストールする"
-description: ""
+keywords: "開発環境,Amazon,EC2,Alminium,redmine,dosancole"
 category: Environment
 published: true
 tags: [開発環境,EC2,Alminium,redmine]
