@@ -67,7 +67,7 @@ permit_conf.each{ |key,value|
 }
 ```
 
-- hooks/update には実行権限を与えてます。
+- hooks/update には実行権限を与えます。
 
 ## 3.フックスクリプトの説明
 
