@@ -7,7 +7,7 @@ published: true
 tags: [開発環境,git]
 ---
 
-![キャッチ](/images/2013-11-24-github.png)
+![キャッチ](/images/2013-11-24-git.png)
 
 gitを使った開発において、masterやdevelopブランチにはpush禁止とし、開発者は各々トピックブランチを生成してからのpull requestを原則とする運用方式があります。
 その場合、 **特定のブランチへのpushを制限する** 必要があります。
