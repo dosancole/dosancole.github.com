@@ -14,7 +14,7 @@ tags: [開発環境,EC2,Alminium,redmine]
 
 今回、Amazon EC2にインストールする手順を残しておきます。
 
-# 1.EC2のインスタンスをラウンチする
+## 1.EC2のインスタンスをラウンチする
 
 - EC2のインスタンスを作成し、ssh接続。
 - 初期設定など
@@ -34,7 +34,7 @@ vi /etc/ssh/sshd_config
 /etc/init.d/sshd reload
 ```
 
-# 2.インストール準備
+## 2.インストール準備
 
 - git等のインストール
 
@@ -62,7 +62,7 @@ gem install bundler --no-ri --no-rdoc
 gem install charlock_holmes --version '0.6.9.4'
 ```
 
-# 3.Alminiumのインストール
+## 3.Alminiumのインストール
 
 - 適切なフォルダにおいて、公開されている EC2 用のスクリプトを実行する（手打ち）
   - https://github.com/angelndxp/AWS-ALMinium/wiki/ALMinium_EC2StandAlone_https
@@ -76,19 +76,18 @@ PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.21
 PassengerRuby /usr/local/rvm/rubies/ruby-2.0.0-p247/bin/ruby 
 ```
 
-# 4.Alminiumの動作確認
+## 4.Alminiumの動作確認
 
 - https://xx.xx.xx.xx でredmineが。
 - https://xx.xx.xx.xx/jenkins で jenkinsが入る
 - 管理者は admin/admin
 
-# 5.Alminiumの初期設定
+## 5.Alminiumの初期設定
 
 - adminユーザをロックしておく。
 
 
-# 参考
+## 参考
 
-http://se-suganuma.blogspot.jp/2013/04/amazon-ec2alminiumredmine.html
-
-https://github.com/alminium/alminium
+#### http://se-suganuma.blogspot.jp/2013/04/amazon-ec2alminiumredmine.html
+#### https://github.com/alminium/alminium

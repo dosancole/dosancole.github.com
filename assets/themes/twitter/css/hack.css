@@ -5,19 +5,39 @@
 
 .post-full h1 {
   font-size: 20px;
-  border-bottom: 2px solid #ddd;
-  line-height: 30px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  border-bottom: 5px double #ddd;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .post-full h2 {
+  font-size: 20px;
+  border-bottom: 2px solid #ddd;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.post-full h3 {
   font-size: 16px;
   border-left: 5px solid #ddd;
   line-height: 20px;
   padding-left: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.post-full h4 {
+  font-size: 13px;
+  font-weight: normal;
+  border-left: 5px double #ddd;
+  line-height: 16px;
+  padding-top: 3px;
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-left: 6px;
+  margin-bottom: 5px;
 }
 
 .post-full li p {
@@ -27,6 +47,18 @@
 .post-full .highlight {
   padding-left:25px;
 }
+
+.post-full em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.post-full strong {
+  font-weight: bold;
+  color: #c00;
+  font-style: normal;
+}
+
 .page-header h1 {
   font-size: 30px;
 }
