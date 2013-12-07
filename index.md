@@ -10,5 +10,20 @@ title: Posts
   {% endfor %}
 </ul>
 
+<br/>
+<h3>Products</h3>
+<hr/>
+<div class="row">
+  <div class="span5 offset1">
+    <div class="well">
+      <h3><a href="http://www.dosancole.com/dsclgrid">dsclgrid.js</a></h3>
+    </div>
+  </div>
+  <div class="span5">
+    <div class="well">
+      <h3><a href="http://www.dosancole.com/dscltable">dscltable.js</a></h3>
+    </div>
+  </div>
+</div>
 
 
