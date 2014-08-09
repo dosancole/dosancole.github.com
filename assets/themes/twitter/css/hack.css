@@ -67,8 +67,8 @@
 /* iPhone */
 @media only screen and (max-device-width: 480px) {
   iframe {
-    width: 300px;
-    height: 226px;
+    width: 427px;
+    height: 356px;
   }
 }
 /* iPad */
